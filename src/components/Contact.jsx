@@ -130,7 +130,7 @@ export default function Contact({ desktop = false }) {
               px-6 py-3 text-sm font-semibold text-slate-900 
               shadow-lg transition"
           >
-            Send Message
+            Let's Connect
             <span aria-hidden="true">🚀</span>
           </Motion.button>
         </Motion.form>

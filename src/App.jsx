@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Achievements from "./components/Achievements";
 
 
 import useScrollSection from "./hooks/useScrollSection";
@@ -32,6 +33,7 @@ export default function App() {
       <Skills />
       <Education />
       <Certifications />
+      <Achievements />
       <Projects />
       <section id="story-contact">
   <Contact desktop />
