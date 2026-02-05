@@ -10,28 +10,25 @@ import DrdoIntern from "../assets/achievements/drdo.png";
 const achievements = [
   {
     title: "Media Recognition – Featured in Eenadu Newspaper",
-    desc: "During the COVID-19 pandemic, a low-cost automatic hand sanitizer system developed as part of an academic initiative was featured in Eenadu newspaper. The article highlighted the engineering design and affordability of the solution, emphasizing how students successfully built a functional, touch-free sanitization device using minimal resources. The coverage focused on innovation, prototype development, and the role of young engineers in addressing real-world problems through practical design.",
+    desc: "During the COVID-19 pandemic, a low-cost automatic hand sanitizer system developed as part of an academic initiative was featured in Eenadu newspaper. The article emphasized the engineering design, affordability, and prototype development, highlighting how students built a functional, touch-free sanitization system using minimal resources to address real-world hygiene challenges.",
     image: NewsArticle2,
   },
-
   {
     title: "Media Recognition – Featured in Sakshi Newspaper",
-    desc: "The same automatic hand sanitizer system gained further recognition through coverage in Sakshi newspaper, which emphasized its social impact during the COVID-19 crisis. The article showcased real-time demonstrations of the device in public settings, highlighting its usefulness in promoting hygiene awareness and reducing physical contact. This recognition underlined the project’s contribution to public health and its relevance during a critical period.",
+    desc: "The same automatic hand sanitizer system gained further recognition through coverage in Sakshi newspaper, focusing on its social impact during the COVID-19 crisis. The article showcased real-time demonstrations in public environments, underlining its role in promoting hygiene awareness and reducing physical contact in critical public spaces.",
     image: NewsArticle1,
   },
-
   {
     title: "Research Exposure – DRDO Internship",
-    desc: "Completed a research-oriented internship at the Defence Research & Development Organisation (DRDO), Young Scientist Laboratory – Asymmetric Technologies (DYS-AT), Hyderabad. Worked on applied Computer Vision systems including Facial Expression Recognition and Hand Gesture Recognition using Python, OpenCV, MediaPipe, and deep learning techniques. Gained hands-on experience in research-driven problem solving, real-time system development, and defense-grade technical workflows.",
+    desc: "Completed a research-oriented internship at the Defence Research & Development Organisation (DRDO), Young Scientist Laboratory – Asymmetric Technologies (DYS-AT), Hyderabad. Worked on applied Computer Vision systems including Facial Expression Recognition and Hand Gesture Recognition using Python, OpenCV, MediaPipe, and deep learning techniques.",
     image: DrdoIntern,
   },
   {
     title: "Official Certification & Academic Recognition",
-    desc: "Formally certified by DRDO – Ministry of Defence, Government of India, for successful completion of a technical research internship. Additionally earned multiple industry-recognized certifications including AWS Academy Cloud Foundations & Machine Learning, HackerRank (Java & Python), AICTE Virtual Internship programs, and Cloud Foundations. These certifications validate strong fundamentals in software development, cloud computing, and applied AI.",
+    desc: "Formally certified by DRDO – Ministry of Defence, Government of India, for successful completion of a technical research internship. Also earned multiple industry-recognized certifications including AWS Academy, HackerRank, AICTE Virtual Internship programs, and Cloud Foundations.",
     image: DrdoCert,
   },
 ];
-
 
 export default function Achievements() {
   const [index, setIndex] = useState(0);
@@ -47,7 +44,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="container-desktop mx-auto py-24 text-slate-100"
+      className="container-desktop mx-auto px-6 sm:px-8 py-20 text-slate-100"
     >
       {/* Heading */}
       <p className="text-xs uppercase tracking-wider text-cyan-300 font-semibold">
@@ -68,58 +65,58 @@ export default function Achievements() {
             exit={{ opacity: 0, y: -40 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
             className="
-              grid grid-cols-1 lg:grid-cols-2 gap-12
+              grid grid-cols-1 lg:grid-cols-2 gap-10
               items-center
               bg-[#0a1628]/60
               border border-white/10
               rounded-2xl
-              p-10
+              p-6 sm:p-8 lg:p-10
               backdrop-blur-md
               shadow-[0_0_40px_rgba(0,0,0,0.4)]
             "
           >
-            {/* IMAGE — FIXED SIZE, NO LAYOUT SHIFT */}
-            <div className="flex justify-center">
+            {/* IMAGE — MOBILE SAFE */}
+            <div className="flex justify-center w-full">
               <div
                 className="
                   w-full
                   max-w-[520px]
-                  h-[520px]
+                  h-[260px]
+                  sm:h-[360px]
+                  lg:h-[520px]
                   flex
                   items-center
                   justify-center
                   rounded-xl
                   bg-[#020617]/60
+                  overflow-hidden
                 "
               >
                 <Motion.img
-                    key={achievements[index].image}
-                    src={achievements[index].image}
-                    alt={achievements[index].title}
-                    initial={{ scale: 1.05 }}
-                    animate={{ scale: 1.15 }}
-                    transition={{ duration: 6, ease: "easeOut" }}
-                    className="
-                        w-full
-                        h-full
-                        object-cover
-                        rounded-xl
-                    "
-                    style={{
-                        objectPosition: "center 35%",
-                    }}
+                  key={achievements[index].image}
+                  src={achievements[index].image}
+                  alt={achievements[index].title}
+                  initial={{ scale: 1.02 }}
+                  animate={{ scale: 1.08 }}
+                  transition={{ duration: 6, ease: "easeOut" }}
+                  className="
+                    w-full
+                    h-full
+                    object-contain
+                    lg:object-cover
+                    rounded-xl
+                  "
                 />
-
               </div>
             </div>
 
-            {/* CONTENT — MATCHES IMAGE HEIGHT */}
+            {/* CONTENT */}
             <div className="flex flex-col justify-center h-full">
-              <h4 className="text-2xl font-semibold mb-4">
+              <h4 className="text-xl sm:text-2xl font-semibold mb-4">
                 {achievements[index].title}
               </h4>
 
-              <p className="text-slate-300 text-lg leading-relaxed max-w-xl">
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
                 {achievements[index].desc}
               </p>
             </div>

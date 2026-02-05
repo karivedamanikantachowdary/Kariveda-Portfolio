@@ -12,7 +12,7 @@ export default function About() {
         text-slate-100
       "
     >
-      <div className="container-desktop mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-desktop mx-auto px-6 sm:px-8 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* LEFT — TEXT */}
         <Motion.div
@@ -32,51 +32,35 @@ export default function About() {
             <p>
               I am a Computer Science graduate with a strong academic and
               practical foundation in Artificial Intelligence, Machine Learning,
-              and Computer Vision. My interest lies in building intelligent
-              systems that can understand and interact with the real world
-              through data and vision.
+              and Computer Vision.
             </p>
 
             <p>
               During my undergraduate studies, I worked extensively on real-time
               Computer Vision projects such as facial expression recognition,
-              hand gesture recognition, and Air Canvas using Python, OpenCV,
-              MediaPipe, and deep learning models.
+              hand gesture recognition, and Air Canvas.
             </p>
 
             <p>
               I am preparing to pursue a Master’s degree in Artificial
-              Intelligence, with the goal of deepening my research capabilities
-              and applying AI techniques to solve challenging real-world
-              problems.
+              Intelligence, focused on applied AI and research-driven problem
+              solving.
             </p>
           </div>
         </Motion.div>
 
-        {/* RIGHT — IMAGE */}
+        {/* RIGHT — IMAGE (VISIBLE ON MOBILE) */}
         <Motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
-          className="hidden lg:flex justify-center"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="flex justify-center"
         >
-          <div className="relative">
-            {/* glow */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-400 to-purple-500 blur-xl opacity-20" />
-
-            <img
-              src={avatar2}
-              alt="About me"
-              className="
-                relative
-                w-80
-                rounded-xl
-                object-cover
-                border border-white/10
-                shadow-2xl
-              "
-            />
-          </div>
+          <img
+            src={avatar2}
+            alt="About me"
+            className="w-60 sm:w-72 md:w-80 rounded-xl object-cover border border-white/10 shadow-2xl"
+          />
         </Motion.div>
 
       </div>
