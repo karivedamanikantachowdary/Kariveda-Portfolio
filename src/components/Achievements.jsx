@@ -2,16 +2,24 @@
 import { useEffect, useState } from "react";
 import { motion as Motion, AnimatePresence } from "framer-motion";
 
+import NewsArticle2 from "../assets/achievements/NewsArticle2.png";
 import NewsArticle1 from "../assets/achievements/NewsArticle1.png";
 import DrdoCert from "../assets/achievements/DrdoCertificate.png";
 import DrdoIntern from "../assets/achievements/drdo.png";
 
 const achievements = [
   {
-    title: "Media Recognition – Featured in Multiple Newspapers",
-    desc: "A low-cost automatic hand sanitizer system developed during the COVID-19 pandemic as part of an academic project received wide media recognition and was featured in leading regional newspapers including Sakshi, Eenadu, and other Telugu daily publications. The solution addressed critical public hygiene challenges by providing an affordable, touch-free sanitization system suitable for schools and public spaces. This coverage highlighted the project’s social impact, practical relevance, and the ability to deliver real-world engineering solutions during a public health crisis.",
+    title: "Media Recognition – Featured in Eenadu Newspaper",
+    desc: "During the COVID-19 pandemic, a low-cost automatic hand sanitizer system developed as part of an academic initiative was featured in Eenadu newspaper. The article highlighted the engineering design and affordability of the solution, emphasizing how students successfully built a functional, touch-free sanitization device using minimal resources. The coverage focused on innovation, prototype development, and the role of young engineers in addressing real-world problems through practical design.",
+    image: NewsArticle2,
+  },
+
+  {
+    title: "Media Recognition – Featured in Sakshi Newspaper",
+    desc: "The same automatic hand sanitizer system gained further recognition through coverage in Sakshi newspaper, which emphasized its social impact during the COVID-19 crisis. The article showcased real-time demonstrations of the device in public settings, highlighting its usefulness in promoting hygiene awareness and reducing physical contact. This recognition underlined the project’s contribution to public health and its relevance during a critical period.",
     image: NewsArticle1,
   },
+
   {
     title: "Research Exposure – DRDO Internship",
     desc: "Completed a research-oriented internship at the Defence Research & Development Organisation (DRDO), Young Scientist Laboratory – Asymmetric Technologies (DYS-AT), Hyderabad. Worked on applied Computer Vision systems including Facial Expression Recognition and Hand Gesture Recognition using Python, OpenCV, MediaPipe, and deep learning techniques. Gained hands-on experience in research-driven problem solving, real-time system development, and defense-grade technical workflows.",
